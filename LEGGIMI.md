@@ -7,7 +7,7 @@ l'applicazione full stack è fornita in due sottoparti chiaramente distinte: 'de
 
 ## Come iniziare (Configurazione del database)
 ### Installare PostgreSQL
-Se PostgreSQL non è installato sul tuo computer, dovresti scaricarlo dal [Sito Ufficiale] (https://www.postgresql.org/download/).
+Se PostgreSQL non è installato sul tuo computer, dovresti scaricarlo dal [Sito Ufficiale](https://www.postgresql.org/download/).
 
 Segui i passaggi di installazione per configurare PostgreSQL, che creerà un utente predefinito (postgres). A seconda del sistema operativo, potrebbe essere necessario configurare manualmente una password; ho impostato la mia su 'password', come puoi vedere nel mio application.yml datasource. Inoltre, assicurati che il componente psql sia selezionato durante l'installazione oppure opta per un amministratore grafico di database come pgAdmin per una gestione più semplice.
 

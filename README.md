@@ -7,7 +7,7 @@ The full-stack application is divided into two clearly distinct parts: 'demo,' w
 
 ## How to Start (Setting the Database)
 ### Install PostgreSQL
-If PostgreSQL is not installed on your machine, you should download it from the [Official Site] (https://www.postgresql.org/download/).
+If PostgreSQL is not installed on your machine, you should download it from the [Official Site](https://www.postgresql.org/download/).
 
 Follow the installation steps to set up PostgreSQL, which will create a default user (postgres). Depending on your OS, a password may require manual configuration; I have set my own to 'password' as you can notice from my application.yml datasource. Additionally, ensure that the psql component is selected during installation, or opt for a graphical DB administrator like pgAdmin for easier management.
 
