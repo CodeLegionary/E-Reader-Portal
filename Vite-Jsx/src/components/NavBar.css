@@ -1,0 +1,102 @@
+/* General Navbar Styles */
+nav {
+    display: flex;
+    flex-direction: row; /* Stack items for small screens */
+    align-items: center;
+    justify-content:space-between;
+    background: #333;
+    color: white;
+    width: 100%;
+    z-index: 10;
+}
+
+.logout-button {
+    background-color: red;
+    transition: background-color 300ms ease-in-out;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: crimson
+}
+
+/* Logo Styling */
+.logo h1 {
+    font-size: 20px;
+    color: aqua;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    flex-direction: row; /* Stacked by default */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+/* Navigation Items */
+.nav-links li {
+    padding: 5px 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* Links */
+.nav-links a, .nav-links button {
+    color: white;
+    transition: color 300ms ease-in-out;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links a:hover, .nav-links button:hover {
+    color: #ccc;
+}
+
+/* Logout Button */
+.text-nav {
+    display: none; /* Hide text by default for mobile */
+}
+
+/* Icon Visibility */
+.icon-nav, .icon-logout {
+    display: inline-flex;
+    font-size: 22px;
+    align-items: center;
+}
+
+/* Mobile View Adjustments */
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row; /* Adjust layout for larger screens */
+        justify-content: space-around;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap; /* Allows wrapping at larger sizes */
+    }
+
+    .text-nav {
+        display: inline-flex; /* Show text on larger screens */
+    }
+
+    .icon-nav, .icon-logout {
+        font-size: 18px; /* Slightly adjust icon size */
+    }
+}

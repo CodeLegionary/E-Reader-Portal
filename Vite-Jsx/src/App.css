@@ -1,0 +1,100 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+p {
+  margin: 5px;
+  padding: 5px;
+  text-shadow: 4px 4px 4px 0 rgb(255, 254, 254);
+  font-weight: 700;
+}
+
+/* Force vertical layout & prevent scrolling */
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto;   /* Allow vertical scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(225deg, cornflowerblue, aqua, royalblue);
+}
+
+.reader-container {
+  width: 100%;  /* Ensure it doesn’t exceed the viewport */
+  height: 100vh; /* Make it fullscreen */
+  overflow: hidden; /* Prevent extra scrolling */
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center; /* This ensures vertical centering */
+  justify-content: center;
+  width: auto;
+  margin: 20px 0;
+}
+
+.carousel button {
+  width: auto;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Centers the button vertically */
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.carousel button:first-of-type {
+  left: 10px; /* Adjust left position */
+}
+
+.carousel button:last-of-type {
+  right: 10px; /* Adjust right position */
+}
+
+.book-link {
+  background: linear-gradient(225deg, rgb(76, 54, 0) 0%, grey 7%, black 50%, grey 90%, rgb(76, 54, 0) 100%);
+  color: white;
+  width: 55%;
+  border-radius: 5%;
+  max-width: 100%;
+  margin: 20px 0;
+  padding: 10px; /* Adds spacing inside for readability */
+  text-align: center; /* Ensures text is centered */
+  font-weight: bold; /* Makes text more readable */
+}
+
+h2 {
+  color: aquamarine;
+  text-shadow: gold 1px 1px 1px;
+}
+
+.info {
+  color: aliceblue;
+  text-shadow: goldenrod 1px 1px 1px;
+}
+
+.book-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .book-links {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .book-link {
+    width: 25%;
+  }
+}
