@@ -2,6 +2,9 @@
 ## INTRO
 A web-based platform for reading eBooks with authentication, reading progress tracking, and review features. Includes database-backed data persistence.
 
+## Structure
+The full-stack application is divided into two clearly distinct parts: 'demo,' which encapsulates the backend and authentication management, is written in Java (Maven + Spring-Boot), while 'Vite-Jsx' handles the dynamic part, developed with React.
+
 ## How to Start (Setting the Database)
 ### Install PostgreSQL
 If PostgreSQL is not installed on your machine, you should download it from the [Official Site] (https://www.postgresql.org/download/).
