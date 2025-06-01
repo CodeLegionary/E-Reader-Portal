@@ -6,7 +6,7 @@ server:
 spring:
   datasource:
     password: password
-    url: jdbc:postgresql://localhost:5432/registration
+    url: jdbc:postgresql://yamanote.proxy.rlwy.net:55439/registration
     username: postgres
   jpa:
     hibernate:
