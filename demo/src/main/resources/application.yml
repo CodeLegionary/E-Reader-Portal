@@ -4,9 +4,9 @@ server:
     include-message: always
     include-binding-errors: always
 
-spring:
+    spring:
   datasource:
-    url: postgresql://postgres:${POSTGRES_PASSWORD}@postgres.railway.internal:5432/registration
+    url: jdbc:postgresql://postgres.railway.internal:5432/registration
     username: postgres
     password: ${POSTGRES_PASSWORD}
     driver-class-name: org.postgresql.Driver
