@@ -6,9 +6,11 @@ server:
 
 spring:
   datasource:
-    password: password
-    url: jdbc:postgresql://yamanote.proxy.rlwy.net:55439/registration
+    url: postgresql://postgres:${POSTGRES_PASSWORD}@postgres.railway.internal:5432/registration
     username: postgres
+    password: ${POSTGRES_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
