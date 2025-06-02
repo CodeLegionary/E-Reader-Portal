@@ -5,6 +5,9 @@ server:
     include-binding-errors: always
 
 spring:
+  jvm:
+    options: -Xmx512m
+
   datasource:
     url: jdbc:postgresql://switchyard.proxy.rlwy.net:52444/railway
     username: ${POSTGRES_USER}
