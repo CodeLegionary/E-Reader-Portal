@@ -22,7 +22,7 @@ const Carousel = () => {
   );
 };
 
-const RedirectToLogin = () => <Navigate to="http://localhost:8080" replace />;
+const RedirectToLogin = () => <Navigate to="http://${VITE_API_URL}:8080" replace />;
 
 const App = () => (
   <Router>
