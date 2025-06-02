@@ -8,6 +8,8 @@ import NavBar from "./components/NavBar";
 import ReadBook from "./pages/ReadBook"; // Updated Read1 to ReadBook
 import Support from "./pages/Support";
 
+const VITE_API_URL = import.meta.env.VITE_API_URL;
+
 const coverImages = [coverImagePath, coverImagePath2, coverImagePath3];
 
 const Carousel = () => {
