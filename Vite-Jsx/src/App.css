@@ -1,8 +1,31 @@
+/* Assicurati che html e body occupino l'intera altezza della finestra */
+html, body {
+  height: 100%; /* Usa 100% per ereditare l'altezza dal viewport */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Previene lo scrolling orizzontale */
+  /* overflow-y: auto;   Permette lo scrolling verticale - gestito da body flex */
+  box-sizing: border-box; /* Assicura che padding e border non aggiungano altezza/larghezza */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(225deg, cornflowerblue, aqua, royalblue);
+  /* overflow-y: auto; è gestito da body flex */
+  min-height: 100%; /* Assicura che il body occupi l'intera altezza disponibile */
+}
+
+/* #root è l'elemento dove la tua app React viene montata */
 #root {
   width: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
+  min-height: 100%; /* Assicura che #root occupi l'intera altezza disponibile */
+  display: flex; /* Aggiunto per aiutare con il layout flessibile */
+  flex-direction: column; /* Aggiunto per il layout flessibile */
 }
 
 p {
@@ -12,28 +35,34 @@ p {
   font-weight: 700;
 }
 
-/* Force vertical layout & prevent scrolling */
-body {
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: auto;   /* Allow vertical scrolling */
+/* Contenitore principale dell'app React, se usato */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* Assicura che il contenitore dell'app occupi l'altezza disponibile */
+  width: 100%;
+}
+
+/* Contenuto principale dell'app, se usato */
+.app-content {
+  flex-grow: 1; /* Permette al contenuto di prendere lo spazio disponibile */
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(225deg, cornflowerblue, aqua, royalblue);
+  width: 100%;
 }
 
 .reader-container {
-  width: 100%;  /* Ensure it doesn’t exceed the viewport */
-  height: 100vh; /* Make it fullscreen */
-  overflow: hidden; /* Prevent extra scrolling */
+  width: 100%;    /* Assicurati che non superi la larghezza della viewport */
+  height: 100vh; /* Rendi l'altezza della viewport */
+  overflow: hidden; /* Previene scrolling extra */
+  border: 1px solid #ddd; /* Bordo dal tuo stile inline originale */
 }
 
 .carousel {
   position: relative;
   display: flex;
-  align-items: center; /* This ensures vertical centering */
+  align-items: center; /* Centratura verticale */
   justify-content: center;
   width: auto;
   margin: 20px 0;
@@ -44,7 +73,7 @@ body {
   padding: 0;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); /* Centers the button vertically */
+  transform: translateY(-50%); /* Centra il bottone verticalmente */
   background: transparent;
   border: none;
   font-size: 2rem;
@@ -52,11 +81,11 @@ body {
 }
 
 .carousel button:first-of-type {
-  left: 10px; /* Adjust left position */
+  left: 10px; /* Regola posizione sinistra */
 }
 
 .carousel button:last-of-type {
-  right: 10px; /* Adjust right position */
+  right: 10px; /* Regola posizione destra */
 }
 
 .book-link {
@@ -66,9 +95,9 @@ body {
   border-radius: 5%;
   max-width: 100%;
   margin: 20px 0;
-  padding: 10px; /* Adds spacing inside for readability */
-  text-align: center; /* Ensures text is centered */
-  font-weight: bold; /* Makes text more readable */
+  padding: 10px; /* Aggiunge spaziatura interna per leggibilità */
+  text-align: center; /* Assicura che il testo sia centrato */
+  font-weight: bold; /* Rende il testo più leggibile */
 }
 
 h2 {
